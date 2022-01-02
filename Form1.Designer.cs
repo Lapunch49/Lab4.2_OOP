@@ -109,6 +109,7 @@ namespace Laba4._2
             this.tbA.Name = "tbA";
             this.tbA.Size = new System.Drawing.Size(125, 27);
             this.tbA.TabIndex = 5;
+            this.tbA.TextChanged += new System.EventHandler(this.tb_TextChanged);
             // 
             // tbB
             // 
@@ -117,6 +118,7 @@ namespace Laba4._2
             this.tbB.Name = "tbB";
             this.tbB.Size = new System.Drawing.Size(125, 27);
             this.tbB.TabIndex = 6;
+            this.tbB.TextChanged += new System.EventHandler(this.tb_TextChanged);
             // 
             // tbC
             // 
@@ -125,6 +127,7 @@ namespace Laba4._2
             this.tbC.Name = "tbC";
             this.tbC.Size = new System.Drawing.Size(125, 27);
             this.tbC.TabIndex = 7;
+            this.tbC.TextChanged += new System.EventHandler(this.tb_TextChanged);
             // 
             // nudA
             // 
@@ -133,6 +136,8 @@ namespace Laba4._2
             this.nudA.Name = "nudA";
             this.nudA.Size = new System.Drawing.Size(125, 27);
             this.nudA.TabIndex = 8;
+            this.nudA.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
+            this.nudA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_KeyUp);
             // 
             // pnlA
             // 
@@ -148,11 +153,14 @@ namespace Laba4._2
             // trbrA
             // 
             this.trbrA.BackColor = System.Drawing.Color.Lavender;
+            this.trbrA.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.trbrA.LargeChange = 1;
             this.trbrA.Location = new System.Drawing.Point(37, 269);
+            this.trbrA.Maximum = 100;
             this.trbrA.Name = "trbrA";
             this.trbrA.Size = new System.Drawing.Size(125, 56);
             this.trbrA.TabIndex = 9;
+            this.trbrA.ValueChanged += new System.EventHandler(this.trbr_ValueChanged);
             // 
             // pnlB
             // 
@@ -168,11 +176,14 @@ namespace Laba4._2
             // trbrB
             // 
             this.trbrB.BackColor = System.Drawing.Color.Lavender;
+            this.trbrB.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.trbrB.LargeChange = 1;
             this.trbrB.Location = new System.Drawing.Point(36, 269);
+            this.trbrB.Maximum = 100;
             this.trbrB.Name = "trbrB";
             this.trbrB.Size = new System.Drawing.Size(125, 56);
             this.trbrB.TabIndex = 13;
+            this.trbrB.ValueChanged += new System.EventHandler(this.trbr_ValueChanged);
             // 
             // nudB
             // 
@@ -181,6 +192,8 @@ namespace Laba4._2
             this.nudB.Name = "nudB";
             this.nudB.Size = new System.Drawing.Size(125, 27);
             this.nudB.TabIndex = 9;
+            this.nudB.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
+            this.nudB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_KeyUp);
             // 
             // pnlC
             // 
@@ -196,11 +209,14 @@ namespace Laba4._2
             // trbrC
             // 
             this.trbrC.BackColor = System.Drawing.Color.Lavender;
+            this.trbrC.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.trbrC.LargeChange = 1;
             this.trbrC.Location = new System.Drawing.Point(37, 269);
+            this.trbrC.Maximum = 100;
             this.trbrC.Name = "trbrC";
             this.trbrC.Size = new System.Drawing.Size(125, 56);
             this.trbrC.TabIndex = 10;
+            this.trbrC.ValueChanged += new System.EventHandler(this.trbr_ValueChanged);
             // 
             // nudC
             // 
@@ -209,6 +225,8 @@ namespace Laba4._2
             this.nudC.Name = "nudC";
             this.nudC.Size = new System.Drawing.Size(125, 27);
             this.nudC.TabIndex = 8;
+            this.nudC.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
+            this.nudC.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_KeyUp);
             // 
             // lbLOEBC
             // 
