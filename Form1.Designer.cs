@@ -109,7 +109,7 @@ namespace Laba4._2
             this.tbA.Name = "tbA";
             this.tbA.Size = new System.Drawing.Size(125, 27);
             this.tbA.TabIndex = 5;
-            this.tbA.TextChanged += new System.EventHandler(this.tb_TextChanged);
+            this.tbA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_KeyDown);
             // 
             // tbB
             // 
@@ -118,7 +118,7 @@ namespace Laba4._2
             this.tbB.Name = "tbB";
             this.tbB.Size = new System.Drawing.Size(125, 27);
             this.tbB.TabIndex = 6;
-            this.tbB.TextChanged += new System.EventHandler(this.tb_TextChanged);
+            this.tbB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_KeyDown);
             // 
             // tbC
             // 
@@ -127,7 +127,7 @@ namespace Laba4._2
             this.tbC.Name = "tbC";
             this.tbC.Size = new System.Drawing.Size(125, 27);
             this.tbC.TabIndex = 7;
-            this.tbC.TextChanged += new System.EventHandler(this.tb_TextChanged);
+            this.tbC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_KeyDown);
             // 
             // nudA
             // 
