@@ -42,6 +42,12 @@ namespace Laba4._2
                     tb.Text = model.get_num(abc).ToString();
                     nud.Value = Decimal.ToInt32(model.get_num(abc));
                     trbr.Value = model.get_num(abc);
+                    // дополнительно вручную вызываем функцию, фиксирующую изменение value для nudB
+                    //if (abc == 'b' && nudB.Value == 0)
+                    //{
+                    //    EventArgs ee = new EventArgs ();
+                    //    trbr_ValueChanged(trbrB, ee);
+                    //}
                 }
                 else
                 {
@@ -68,6 +74,7 @@ namespace Laba4._2
         {
             if (e.KeyCode == Keys.Enter)
             {
+                e.SuppressKeyPress = true; // чтобы при нажатии на enter не возникал звук
                 TextBox tb = (TextBox)sender;
                 char abc = tb.Name.ToString()[2];
                 model.set_value(tb.Text.ToString(), abc);
@@ -79,10 +86,13 @@ namespace Laba4._2
             char abc = nud.Name.ToString()[3]; // узнаем с a,b или c мы работаем
             model.set_value(nud.Value.ToString(),abc);
         }
-        private void nud_KeyUp(object sender, KeyEventArgs e) 
+        private void nud_KeyDown(object sender, KeyEventArgs e) 
         {   // при изменении значения не через кнопки "больше-меньше", искусственно вызываем valueChanged
             if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // чтобы при нажатии на enter не возникал звук
                 nud_ValueChanged(sender, e);
+            }
         }
         private void trbr_ValueChanged(object sender, EventArgs e)
         {

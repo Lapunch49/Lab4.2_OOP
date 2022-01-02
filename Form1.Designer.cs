@@ -137,7 +137,7 @@ namespace Laba4._2
             this.nudA.Size = new System.Drawing.Size(125, 27);
             this.nudA.TabIndex = 8;
             this.nudA.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
-            this.nudA.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_KeyUp);
+            this.nudA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nud_KeyDown);
             // 
             // pnlA
             // 
@@ -193,7 +193,7 @@ namespace Laba4._2
             this.nudB.Size = new System.Drawing.Size(125, 27);
             this.nudB.TabIndex = 9;
             this.nudB.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
-            this.nudB.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_KeyUp);
+            this.nudB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nud_KeyDown);
             // 
             // pnlC
             // 
@@ -226,7 +226,7 @@ namespace Laba4._2
             this.nudC.Size = new System.Drawing.Size(125, 27);
             this.nudC.TabIndex = 8;
             this.nudC.ValueChanged += new System.EventHandler(this.nud_ValueChanged);
-            this.nudC.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nud_KeyUp);
+            this.nudC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nud_KeyDown);
             // 
             // lbLOEBC
             // 
