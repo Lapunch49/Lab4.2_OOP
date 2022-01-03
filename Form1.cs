@@ -41,21 +41,17 @@ namespace Laba4._2
                 {
                     tb.Text = model.get_num(abc).ToString();
                     nud.Value = Decimal.ToInt32(model.get_num(abc));
+                    nud.Text = model.get_num(abc).ToString(); // для nud также обновляем значение text 
                     trbr.Value = model.get_num(abc);
-                    // дополнительно вручную вызываем функцию, фиксирующую изменение value для nudB
-                    //if (abc == 'b' && nudB.Value == 0)
-                    //{
-                    //    EventArgs ee = new EventArgs ();
-                    //    trbr_ValueChanged(trbrB, ee);
-                    //}
                 }
                 else
                 {
                     tb.Text = "";
+                    nud.Value = 0;
                     nud.ResetText();
                     trbr.Value = 0;
                 }
-                abc++; // ?
+                abc++;
                 if (abc == 'b')
                 {
                     tb = tbB;
