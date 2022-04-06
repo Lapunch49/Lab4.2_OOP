@@ -32,26 +32,21 @@ namespace Laba4._2
         private void update_from_model(object sender, EventArgs e)
         {   // обновляем все поля на форме
             char abc = 'a';
+
             TextBox tb = tbA;
             NumericUpDown nud = nudA;
             TrackBar trbr = trbrA;
+
             while (abc != 'd')
             {
-                if (model.get_num(abc) != -1)
-                {
-                    tb.Text = model.get_num(abc).ToString();
-                    nud.Value = Decimal.ToInt32(model.get_num(abc));
-                    nud.Text = model.get_num(abc).ToString(); // для nud также обновляем значение text 
-                    trbr.Value = model.get_num(abc);
-                }
-                else
-                {
-                    tb.Text = "";
-                    nud.Value = 0;
-                    nud.ResetText();
-                    trbr.Value = 0;
-                }
+                tb.Text = model.get_num(abc).ToString();
+                nud.Value = Decimal.ToInt32(model.get_num(abc));
+                nud.Text = model.get_num(abc).ToString(); // для nud также обновляем значение text 
+                trbr.Value = model.get_num(abc);
+
+                // переходим к след. числам
                 abc++;
+
                 if (abc == 'b')
                 {
                     tb = tbB;
@@ -100,9 +95,9 @@ namespace Laba4._2
     public class Model
     {
         private
-        int a=-1;
-        int b=-1;
-        int c=-1;
+        int a=0;
+        int b=0;
+        int c=0;
         public System.EventHandler observers; // для обновления всех полей при изменении a,b,c
         public Model(int a, int b, int c)
         {
