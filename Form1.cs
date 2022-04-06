@@ -131,6 +131,16 @@ namespace Laba4._2
             else
                 b = -1;
         }
+        public void check_a() // если после изм-я C нужно изменить A
+        {
+            if (a > c)
+                a = c;
+        }
+        public void check_c() // если после изм-я A нужно изменить C
+        {
+            if (c < a)
+                c = a;
+        }
         public void set_value(string str, char abc)
         {
             // проверка входящей последовательности символов 
@@ -153,13 +163,21 @@ namespace Laba4._2
 
             // меняем значение для свойста abc (a/b/c) 
             if (abc == 'A')
+            {
                 this.a = new_num;
+                check_c();
+            }
             else if (abc == 'C')
+            {
                 this.c = new_num;
+                check_a();
+            }
             else if (abc == 'B' && new_num >= a && new_num <= c)
                 this.b = new_num;
+
             // после изменения, проверяем выполнение условия a<=b<=c, если надо - меняем b
             check_b(); 
+
             // обновляем значения в полях формы
             observers.Invoke(this, null);
         }
